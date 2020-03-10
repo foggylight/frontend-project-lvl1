@@ -1,4 +1,4 @@
-name: brain-games
+name: Brain Games
 
 on:
   - push
