@@ -8,22 +8,22 @@
 [![asciicast](https://asciinema.org/a/H0cpMqXPnQ2sRgaZnZTXLyDwZ.svg)](https://asciinema.org/a/H0cpMqXPnQ2sRgaZnZTXLyDwZ)
 
 ## Games
-### Brain Even
+### Even parity
 
-[![asciicast](https://asciinema.org/a/FgjAHTXrliZIfwCFPZXikXpvZ.svg)](https://asciinema.org/a/FgjAHTXrliZIfwCFPZXikXpvZ)
+[![asciicast](https://asciinema.org/a/FVQVbyzIzVFA6R2H97WFtWSNn.svg)](https://asciinema.org/a/FVQVbyzIzVFA6R2H97WFtWSNn)
 
-### Brain Calculate
+### Calculator
 
-[![asciicast](https://asciinema.org/a/6MLnYu2d3JEUqzEielqtjkUIv.svg)](https://asciinema.org/a/6MLnYu2d3JEUqzEielqtjkUIv)
+[![asciicast](https://asciinema.org/a/bp0KgX5Z1WGNiSADBttBA6eW3.svg)](https://asciinema.org/a/bp0KgX5Z1WGNiSADBttBA6eW3)
 
-### Brain GCD
+### GCD
 
-[![asciicast](https://asciinema.org/a/CTCarwgYCpLVz8CUfKu8VWcTP.svg)](https://asciinema.org/a/CTCarwgYCpLVz8CUfKu8VWcTP)
+[![asciicast](https://asciinema.org/a/O6P2I6RThylXDeVyPFJPKcTR2.svg)](https://asciinema.org/a/O6P2I6RThylXDeVyPFJPKcTR2)
 
-### Brain Progression
+### Arithmetical progression
 
-[![asciicast](https://asciinema.org/a/ZWFsldVSFk4aVCbDSPwqcBi6T.svg)](https://asciinema.org/a/ZWFsldVSFk4aVCbDSPwqcBi6T)
+[![asciicast](https://asciinema.org/a/EzedRGCOuSWPVGwBwuYUynbpX.svg)](https://asciinema.org/a/EzedRGCOuSWPVGwBwuYUynbpX)
 
-### Brain Prime
+### Prime numbers
 
-[![asciicast](https://asciinema.org/a/0Vi6OU8Wxamp2K4Q48QKKaF1C.svg)](https://asciinema.org/a/0Vi6OU8Wxamp2K4Q48QKKaF1C)
+[![asciicast](https://asciinema.org/a/lH2SniU52IQ4ffepdreMJKpaI.svg)](https://asciinema.org/a/lH2SniU52IQ4ffepdreMJKpaI)
