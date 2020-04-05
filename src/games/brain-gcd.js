@@ -13,8 +13,8 @@ const gcd = (a, b) => {
 };
 
 const gameCore = () => {
-  const firstNum = getRandomInt(100);
-  const secondNum = getRandomInt(100);
+  const firstNum = getRandomInt(5, 100);
+  const secondNum = getRandomInt(5, 100);
   console.log(`Question: ${firstNum} ${secondNum}`);
   return gcd(firstNum, secondNum).toString();
 };

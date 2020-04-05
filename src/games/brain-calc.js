@@ -1,8 +1,13 @@
-import { getRandomInt, getRandomOperation, engine } from '../index.js';
+import { getRandomInt, engine } from '../index.js';
+
+const getRandomOperation = (arr) => {
+  const randomIndex = getRandomInt(0, arr.length);
+  return arr[randomIndex];
+};
 
 const gameCore = () => {
-  const firstNum = getRandomInt(30);
-  const secondNum = getRandomInt(30);
+  const firstNum = getRandomInt(2, 30);
+  const secondNum = getRandomInt(2, 30);
   const operation = getRandomOperation(['+', '-', '*']);
   console.log(`Question: ${firstNum} ${operation} ${secondNum}`);
   let correctAnswer;

@@ -1,7 +1,7 @@
 import { getRandomInt, engine } from '../index.js';
 
 const gameCore = () => {
-  const number = getRandomInt(100);
+  const number = getRandomInt(2, 100);
   console.log(`Question: ${number}`);
   const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
   return correctAnswer;

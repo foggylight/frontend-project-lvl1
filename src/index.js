@@ -22,6 +22,9 @@ export const checkAnswer = (correctAnswer, userAnswer) => {
   return `${userAnswer} is wrong answer :( Correct answer was ${correctAnswer}.`;
 };
 
+// for games:
+export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
 // games engine:
 export const engine = (gameCoreFunc) => {
   for (let i = 1; i <= 3; i += 1) {
@@ -34,13 +37,4 @@ export const engine = (gameCoreFunc) => {
     }
   }
   return true;
-};
-
-// for brain-even:
-export const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
-
-// for brain-calc:
-export const getRandomOperation = (arr) => {
-  const randomIndex = getRandomInt(arr.length);
-  return arr[randomIndex];
 };
