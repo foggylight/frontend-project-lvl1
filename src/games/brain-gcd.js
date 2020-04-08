@@ -1,4 +1,5 @@
-import { getRandomInt, engine } from '../index.js';
+import getRandomInt from '../utils.js';
+import { engine } from '../index.js';
 
 const gcd = (a, b) => {
   let divisible = a;
@@ -20,9 +21,9 @@ const gameCore = () => {
 };
 
 const brainGcd = () => {
-  console.log('Find the greatest common divisor of given numbers.');
-  const result = engine(gameCore);
-  return result;
+  const gameRules = 'Find the greatest common divisor of given numbers.';
+  const result = engine(gameRules, gameCore);
+  console.log(result);
 };
 
 export default brainGcd;

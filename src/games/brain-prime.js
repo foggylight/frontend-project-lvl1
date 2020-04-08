@@ -1,4 +1,5 @@
-import { getRandomInt, engine } from '../index.js';
+import getRandomInt from '../utils.js';
+import { engine } from '../index.js';
 
 const isPrime = (num) => {
   for (let i = 2; i <= num / 2; i += 1) {
@@ -17,9 +18,9 @@ const gameCore = () => {
 };
 
 const brainPrime = () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  const result = engine(gameCore);
-  return result;
+  const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const result = engine(gameRules, gameCore);
+  console.log(result);
 };
 
 export default brainPrime;

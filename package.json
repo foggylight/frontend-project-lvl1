@@ -1,7 +1,13 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.0.5",
+  "description": "JS project with 5 mathematical console mini games",
+  "keywords": [
+    "JS",
+    "console games",
+    "mini games",
+    "math"
+  ],
   "main": "src/index.js",
   "type": "module",
   "bin": {

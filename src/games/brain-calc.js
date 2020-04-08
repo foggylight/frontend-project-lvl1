@@ -1,4 +1,5 @@
-import { getRandomInt, engine } from '../index.js';
+import getRandomInt from '../utils.js';
+import { engine } from '../index.js';
 
 const getRandomOperation = (arr) => {
   const randomIndex = getRandomInt(0, arr.length);
@@ -22,9 +23,9 @@ const gameCore = () => {
 };
 
 const brainCalc = () => {
-  console.log('What is the result of the expression?');
-  const result = engine(gameCore);
-  return result;
+  const gameRules = 'What is the result of the expression?';
+  const result = engine(gameRules, gameCore);
+  console.log(result);
 };
 
 export default brainCalc;
