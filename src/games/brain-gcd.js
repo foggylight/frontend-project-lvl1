@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import { engine } from '../index.js';
+import engine from '../index.js';
 
 const gcd = (a, b) => {
   let divisible = a;
@@ -16,13 +16,12 @@ const gcd = (a, b) => {
 const gameCore = () => {
   const firstNum = getRandomInt(5, 100);
   const secondNum = getRandomInt(5, 100);
-  console.log(`Question: ${firstNum} ${secondNum}`);
-  return gcd(firstNum, secondNum).toString();
+  return [`${firstNum} ${secondNum}`, gcd(firstNum, secondNum).toString()];
 };
 
 const brainGcd = () => {
-  const gameRules = 'Find the greatest common divisor of given numbers.';
-  const result = engine(gameRules, gameCore);
+  const description = 'Find the greatest common divisor of given numbers.';
+  const result = engine(description, gameCore);
   console.log(result);
 };
 
