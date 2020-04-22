@@ -1,25 +1,25 @@
 import getRandomInt from '../utils.js';
 import engine from '../index.js';
 
-const isPrime = (num) => {
-  for (let i = 2; i <= num / 2; i += 1) {
-    if (num % i === 0) {
+const isPrime = (number) => {
+  for (let i = 2; i <= number / 2; i += 1) {
+    if (number % i === 0) {
       return false;
     }
   }
   return true;
 };
 
-const gameCore = () => {
-  const number = getRandomInt(2, 50);
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  return [number, correctAnswer];
+const doGameLogic = () => {
+  const question = getRandomInt(2, 50);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const brainPrime = () => {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const result = engine(description, gameCore);
-  console.log(result);
+  engine(description, doGameLogic);
 };
 
 export default brainPrime;

@@ -1,23 +1,25 @@
 import getRandomInt from '../utils.js';
 import engine from '../index.js';
 
-const gameCore = () => {
+const doGameLogic = () => {
   const firstNum = getRandomInt(2, 9);
   const progression = [];
   const diff = getRandomInt(2, 9);
-  for (let d = firstNum, i = 0; i < 10; d += diff, i += 1) {
+  const progressionLength = 10;
+  for (let d = firstNum, i = 0; i < progressionLength; d += diff, i += 1) {
     progression.push(d);
   }
   const progressionForUser = [...progression];
-  const hiddenNumIndex = getRandomInt(0, 9);
+  const hiddenNumIndex = getRandomInt(0, progressionLength - 1);
   progressionForUser[hiddenNumIndex] = '..';
-  return [`${progressionForUser.join(' ')}`, progression[hiddenNumIndex].toString()];
+  const question = `${progressionForUser.join(' ')}`;
+  return [question, progression[hiddenNumIndex].toString()];
 };
 
+const description = 'What number is missing in the progression?';
+
 const brainProgression = () => {
-  const description = 'What number is missing in the progression?';
-  const result = engine(description, gameCore);
-  console.log(result);
+  engine(description, doGameLogic);
 };
 
 export default brainProgression;

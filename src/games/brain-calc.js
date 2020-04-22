@@ -1,30 +1,36 @@
+/* eslint-disable default-case */
 import getRandomInt from '../utils.js';
 import engine from '../index.js';
 
-const getRandomOperation = (arr) => {
-  const randomIndex = getRandomInt(0, arr.length - 1);
-  return arr[randomIndex];
-};
-
-const gameCore = () => {
+const doGameLogic = () => {
   const firstNum = getRandomInt(2, 30);
   const secondNum = getRandomInt(2, 30);
-  const operation = getRandomOperation(['+', '-', '*']);
+  const operations = ['+', '-', '*'];
+  const operation = operations[getRandomInt(0, operations.length - 1)];
   let correctAnswer;
-  if (operation === '+') {
-    correctAnswer = firstNum + secondNum;
-  } else if (operation === '-') {
-    correctAnswer = firstNum - secondNum;
-  } else if (operation === '*') {
-    correctAnswer = firstNum * secondNum;
+  switch (operation) {
+    case '+':
+      correctAnswer = firstNum + secondNum;
+      break;
+
+    case '-':
+      correctAnswer = firstNum - secondNum;
+      break;
+
+    case '*':
+      correctAnswer = firstNum * secondNum;
+      break;
+
+    default:
   }
-  return [`${firstNum} ${operation} ${secondNum}`, correctAnswer.toString()];
+  const question = `${firstNum} ${operation} ${secondNum}`;
+  return [question, correctAnswer.toString()];
 };
 
+const description = 'What is the result of the expression?';
+
 const brainCalc = () => {
-  const description = 'What is the result of the expression?';
-  const result = engine(description, gameCore);
-  console.log(result);
+  engine(description, doGameLogic);
 };
 
 export default brainCalc;

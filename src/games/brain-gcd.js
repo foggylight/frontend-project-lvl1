@@ -13,16 +13,17 @@ const gcd = (a, b) => {
   return divisor;
 };
 
-const gameCore = () => {
+const doGameLogic = () => {
   const firstNum = getRandomInt(5, 100);
   const secondNum = getRandomInt(5, 100);
-  return [`${firstNum} ${secondNum}`, gcd(firstNum, secondNum).toString()];
+  const question = `${firstNum} ${secondNum}`;
+  return [question, gcd(firstNum, secondNum).toString()];
 };
 
+const description = 'Find the greatest common divisor of given numbers.';
+
 const brainGcd = () => {
-  const description = 'Find the greatest common divisor of given numbers.';
-  const result = engine(description, gameCore);
-  console.log(result);
+  engine(description, doGameLogic);
 };
 
 export default brainGcd;
