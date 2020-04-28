@@ -3,6 +3,9 @@ import engine from '../index.js';
 
 const isPrime = (number) => {
   for (let i = 2; i <= number / 2; i += 1) {
+    if (number < 2) {
+      return false;
+    }
     if (number % i === 0) {
       return false;
     }
@@ -10,7 +13,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const doGameLogic = () => {
+const getGameData = () => {
   const question = getRandomInt(2, 50);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
@@ -18,8 +21,6 @@ const doGameLogic = () => {
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const brainPrime = () => {
-  engine(description, doGameLogic);
-};
+const brainPrime = () => engine(description, getGameData);
 
 export default brainPrime;

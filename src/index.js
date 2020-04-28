@@ -7,7 +7,8 @@ const engine = (description, gameLogicFunc) => {
   });
   console.log(`Hello, ${userName}!`);
   console.log(description);
-  for (let i = 1; i <= 3; i += 1) {
+  const roundsCount = 3;
+  for (let i = 1; i <= roundsCount; i += 1) {
     const [question, correctAnswer] = gameLogicFunc();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');

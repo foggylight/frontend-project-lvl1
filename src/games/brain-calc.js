@@ -2,7 +2,7 @@
 import getRandomInt from '../utils.js';
 import engine from '../index.js';
 
-const doGameLogic = () => {
+const getGameData = () => {
   const firstNum = getRandomInt(2, 30);
   const secondNum = getRandomInt(2, 30);
   const operations = ['+', '-', '*'];
@@ -29,8 +29,6 @@ const doGameLogic = () => {
 
 const description = 'What is the result of the expression?';
 
-const brainCalc = () => {
-  engine(description, doGameLogic);
-};
+const brainCalc = () => engine(description, getGameData);
 
 export default brainCalc;
